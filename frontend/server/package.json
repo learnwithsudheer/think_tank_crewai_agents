@@ -1,0 +1,14 @@
+{
+  "name": "think-tank-buddy-server",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Backend server for Think Tank Buddy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

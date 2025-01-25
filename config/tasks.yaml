@@ -1,0 +1,68 @@
+idea_scouting_task:
+  description: >
+    Conduct an extensive web search to identify innovative applications and ideas in
+    the given topic. Focus on technologies such as AI, blockchain, and quantum computing.
+    Ensure the results include novel ideas that address real-world problems and offer
+    actionable insights.
+  expected_output: >
+    A list of 3-5 ideas with detailed titles and descriptions. Each idea must include
+    at least one unique application and explain how it addresses a specific problem.
+  agent: idea_scout
+
+context_enrichment_task:
+  description: >
+    Analyze the raw ideas to provide enriched contextual details. These details should
+    include the target audience, the specific problem solved, potential competitors,
+    and any relevant industry dynamics.
+  expected_output: >
+    A list of enriched ideas. Each idea should have:
+      - Target audience: Who benefits from this idea.
+      - Problem solved: A clear explanation of the issue it addresses.
+      - Competitors: At least 2-3 existing solutions or market players.
+  agent: context_analyzer
+
+impact_estimation_task:
+  description: >
+    For each idea, estimate its market potential. Include quantitative metrics such
+    as market size (in USD), number of beneficiaries (individuals or organizations),
+    and measurable impacts (e.g., cost savings, efficiency improvements).
+  expected_output: >
+    A list of impact reports. Each report should include:
+      - Market size (e.g., $X billion).
+      - Potential beneficiaries (e.g., 10,000+ users).
+      - Key measurable outcomes (e.g., 20% efficiency gain).
+  agent: impact_estimator
+
+turnaround_evaluation_task:
+  description: >
+    Evaluate the feasibility of implementing each idea and estimate its time-to-market.
+    Assign a feasibility score (scale: 1-10) based on technical readiness, resource
+    requirements, and potential risks. Provide an estimated timeline in months.
+  expected_output: >
+    A list of feasibility evaluations. Each evaluation should include:
+      - Feasibility score (1-10, where 10 is highly feasible).
+      - Time-to-market: Estimated implementation timeline in months.
+      - Key risks and considerations for execution.
+  agent: turnaround_evaluator
+
+report_generation_task:
+  description: >
+    Compile all outputs into a structured report. The report should include summaries
+    of enriched ideas, impact metrics, feasibility scores, and actionable insights.
+  expected_output: >
+    A dictionary with the following structure:
+      - ideas: A list of enriched ideas, each including:
+        - Title: The title of the idea.
+        - Description: A description of the idea.
+        - Target Audience: The target audience of the idea.
+        - Problem Solved: The problem it addresses.
+        - Competitors: List of competitors or existing solutions.
+        - impact_metrics: A list of metrics for each idea, including:
+          - Market Size: Estimated market size in USD.
+          - Beneficiaries: Number of potential beneficiaries.
+          - Key Outcomes: Specific measurable outcomes.
+        - feasibility: A list of feasibility evaluations, including:
+          - Feasibility Score: Score (1-10).
+          - Time to Market: Estimated timeline in months.
+          - Key Risks: Identified risks.
+  agent: report_generator
